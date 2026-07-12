@@ -1,0 +1,519 @@
+/* ═══════════════════════════════════════════
+   Mon petit coin d'herbes — feuille de style
+   Palette douce : crème, verts tendres, terracotta
+   ═══════════════════════════════════════════ */
+
+:root {
+  --cream: #faf6ec;
+  --cream-dark: #f3ecd9;
+  --green-deep: #4a6b3f;
+  --green: #6d9460;
+  --green-soft: #a8c39a;
+  --green-pale: #e6efdd;
+  --terracotta: #c8704f;
+  --terracotta-soft: #f2ddd2;
+  --ink: #43402f;
+  --ink-soft: #6b675a;
+  --white: #fffdf7;
+  --shadow: 0 6px 24px rgba(74, 107, 63, 0.12);
+  --radius: 22px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  /* léger grain de papier */
+  background-image: radial-gradient(rgba(74, 107, 63, 0.035) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+h1, h2, h3 { font-family: 'Lora', Georgia, serif; color: var(--green-deep); }
+
+.handwritten {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+}
+
+.accent { color: var(--terracotta); font-size: 1.15em; }
+
+/* ═══════════ HÉRO ═══════════ */
+
+.hero {
+  position: relative;
+  background: linear-gradient(170deg, var(--green-pale) 0%, #d8e8cc 55%, #cbdfbd 100%);
+  padding: 3.5rem 1.5rem 6.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
+
+.hero-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transform: rotate(-2.5deg);
+  margin-bottom: -0.35rem;
+}
+
+.eyebrow-leaf { font-size: 1.2rem; display: inline-block; transform: rotate(-20deg); }
+.eyebrow-leaf.flip { transform: scaleX(-1) rotate(-20deg); }
+
+.hero-title {
+  font-size: clamp(2.8rem, 7.5vw, 4.6rem);
+  font-style: italic;
+  line-height: 1.08;
+  margin: 0;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.6);
+}
+
+.title-emoji {
+  font-style: normal;
+  font-size: 0.75em;
+}
+
+.hero-squiggle {
+  width: min(280px, 55vw);
+  height: 14px;
+  display: block;
+  margin: 0.15rem auto 0.9rem;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 520px;
+  margin: 0 auto 1.8rem;
+}
+
+.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+}
+.wave svg { width: 100%; height: 60px; display: block; }
+
+/* ═══════════ PHOTOS ═══════════ */
+
+.photo {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px;
+  display: inline-block;
+  position: relative;
+}
+
+.photo img {
+  width: 100%;
+  max-width: 640px;
+  border-radius: calc(var(--radius) - 8px);
+  display: block;
+}
+
+.photo figcaption {
+  font-family: 'Caveat', cursive;
+  font-size: 1.35rem;
+  color: var(--ink-soft);
+  padding-top: 0.5rem;
+}
+
+.photo-garden {
+  transform: rotate(-1.2deg);
+  transition: transform 0.3s ease;
+}
+.photo-garden:hover { transform: rotate(0deg) scale(1.02); }
+
+/* photo portrait recadrée en douceur sur le potager */
+.photo-garden img {
+  width: min(640px, 78vw);
+  max-height: 440px;
+  object-fit: cover;
+  object-position: center 68%;
+}
+
+.photo-polaroid {
+  transform: rotate(2deg);
+  padding-bottom: 4px;
+  transition: transform 0.3s ease;
+}
+.photo-polaroid:hover { transform: rotate(0deg) scale(1.02); }
+.photo-polaroid img { max-width: 460px; }
+
+/* petit bout de scotch */
+.tape {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 110px;
+  height: 30px;
+  background: rgba(232, 213, 160, 0.85);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border-left: 1px dashed rgba(255,255,255,0.5);
+  border-right: 1px dashed rgba(255,255,255,0.5);
+  z-index: 2;
+}
+
+/* ═══════════ SECTIONS ═══════════ */
+
+.section { padding: 4.5rem 1.5rem; max-width: 1000px; margin: 0 auto; }
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  margin-bottom: 0.8rem;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 3rem;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+}
+
+/* ═══════════ MAMAN ═══════════ */
+
+.maman-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.maman-text h2 {
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+}
+
+.maman-text p { margin-bottom: 1rem; font-size: 1.05rem; }
+
+@media (max-width: 760px) {
+  .maman-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 2.5rem; }
+}
+
+/* ═══════════ CARTES « POURQUOI » ═══════════ */
+
+.section-pourquoi {
+  max-width: none;
+  background: var(--green-pale);
+  border-radius: 40px;
+  margin: 1rem auto;
+  max-width: 1100px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.5rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.25s ease;
+  border: 1px solid rgba(168, 195, 154, 0.35);
+}
+.card:hover { transform: translateY(-6px) rotate(-0.5deg); }
+
+.card-icon { font-size: 2.4rem; display: block; margin-bottom: 0.7rem; }
+
+.card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+
+.card p { font-size: 0.95rem; color: var(--ink-soft); }
+
+/* ═══════════ PLANTES ═══════════ */
+
+.picker-hint {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 1.45rem;
+  color: var(--terracotta);
+}
+
+.plant-picker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2.8rem;
+}
+
+.picker-btn {
+  font-family: inherit;
+  background: var(--white);
+  border: 2px solid rgba(168, 195, 154, 0.5);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 1rem 1.2rem 0.8rem;
+  min-width: 108px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+}
+
+.picker-btn:hover { transform: translateY(-6px) rotate(-2deg); }
+
+.picker-btn:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+}
+
+.picker-btn .picker-icon {
+  font-size: 2.2rem;
+  background: var(--green-pale);
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.22s ease;
+}
+
+.picker-btn:hover .picker-icon { transform: rotate(8deg) scale(1.08); }
+
+.picker-name {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--green-deep);
+}
+
+.picker-btn.is-active {
+  background: var(--green-pale);
+  border-color: var(--green);
+  transform: translateY(-4px) scale(1.05);
+}
+
+.picker-btn.is-active .picker-icon {
+  background: var(--white);
+  box-shadow: inset 0 0 0 2px var(--green-soft);
+}
+
+.plant {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.2rem 2.4rem;
+  margin-bottom: 2.2rem;
+  border: 1px solid rgba(168, 195, 154, 0.35);
+  position: relative;
+}
+
+.plant[hidden] { display: none; }
+
+/* la carte « pousse » en douceur quand on la révèle */
+.plant.is-active { animation: pousser 0.45s ease both; }
+
+@keyframes pousser {
+  from { opacity: 0; transform: translateY(16px) scale(0.985); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.plant-header {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 2px dashed var(--green-soft);
+}
+
+.plant-icon {
+  font-size: 2.6rem;
+  background: var(--green-pale);
+  border-radius: 50%;
+  width: 74px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.plant-header h3 { font-size: 1.6rem; }
+
+.plant-latin { font-size: 1.25rem; color: var(--terracotta); font-weight: 500; }
+
+.plant-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 700px) {
+  .plant-body { grid-template-columns: 1fr; }
+  .plant { padding: 1.6rem 1.4rem; }
+}
+
+.plant-block h4 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.02rem;
+  color: var(--green-deep);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+.plant-block p { font-size: 0.98rem; }
+
+.plant-advice {
+  background: var(--terracotta-soft);
+  border-radius: 16px;
+  padding: 1.2rem 1.4rem;
+}
+
+.plant-advice ul { list-style: none; }
+
+.plant-advice li {
+  font-size: 0.95rem;
+  padding-left: 1.5em;
+  position: relative;
+  margin-bottom: 0.55rem;
+}
+
+.plant-advice li::before {
+  content: '🌱';
+  position: absolute;
+  left: 0;
+  font-size: 0.85em;
+  top: 0.15em;
+}
+
+/* ═══════════ CONTACT ═══════════ */
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.contact-card {
+  background: var(--white);
+  border: 2px dashed var(--green-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.8rem 2.2rem;
+  min-width: 240px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  border-color: var(--terracotta);
+}
+
+.contact-icon { font-size: 2.2rem; display: block; margin-bottom: 0.5rem; }
+
+.contact-card h3 { font-size: 1.15rem; margin-bottom: 0.3rem; }
+
+.contact-card p { color: var(--green-deep); font-weight: 700; }
+
+.contact-note {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+}
+
+.email-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.email-row a { color: var(--green-deep); }
+
+.eye-btn {
+  font-family: inherit;
+  font-size: 1.1rem;
+  line-height: 1;
+  background: var(--green-pale);
+  border: 2px solid var(--green-soft);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.eye-btn:hover { transform: scale(1.12) rotate(-6deg); background: var(--white); }
+
+.eye-btn:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 2px;
+}
+
+/* carte WhatsApp « bientôt » : non cliquable, légèrement estompée */
+.contact-card-soon {
+  opacity: 0.75;
+  cursor: default;
+}
+.contact-card-soon:hover { transform: none; border-color: var(--green-soft); }
+.contact-card-soon p { color: var(--terracotta); }
+
+/* ═══════════ MOT DE LA FIN ═══════════ */
+
+.section-fin { text-align: center; padding-top: 2rem; }
+
+.fin-card {
+  background: var(--green-pale);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+  border: 2px dashed var(--green-soft);
+}
+
+.fin-quote {
+  font-size: clamp(1.5rem, 3.5vw, 1.9rem);
+  color: var(--green-deep);
+  line-height: 1.45;
+}
+
+.fin-signature {
+  margin-top: 1rem;
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  color: var(--terracotta);
+}
+
+/* ═══════════ PIED DE PAGE ═══════════ */
+
+.footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  background: var(--cream-dark);
+  margin-top: 3rem;
+}

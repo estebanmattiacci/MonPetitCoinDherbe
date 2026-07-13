@@ -452,6 +452,11 @@ h1, h2, h3 { font-family: 'Lora', Georgia, serif; color: var(--green-deep); }
 
 .email-row a { color: var(--green-deep); }
 
+/* états masqué / affiché superposés : la largeur ne change pas au clic */
+#email-value { display: inline-grid; }
+#email-value > span { grid-area: 1 / 1; text-align: center; }
+#email-value .is-hidden { visibility: hidden; }
+
 .eye-btn {
   font-family: inherit;
   font-size: 1.1rem;
@@ -472,6 +477,9 @@ h1, h2, h3 { font-family: 'Lora', Georgia, serif; color: var(--green-deep); }
   outline: 3px solid var(--green);
   outline-offset: 2px;
 }
+
+/* carte e-mail : se soulève sans pencher */
+.contact-card-email:hover { transform: translateY(-6px); }
 
 /* carte WhatsApp « bientôt » : non cliquable, légèrement estompée */
 .contact-card-soon {
